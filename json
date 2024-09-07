@@ -1,0 +1,32 @@
+<! DOCTYPE html>
+<html lang- "en"›
+<head>
+<meta charset="UTF-8">
+smeta name-"viewport" content-"width-device-width, initial-scale-1.0->
+stitle 标題</title>
+<head>
+<body> <script>
+window.onload - function() {
+//创建一个包含 JSON 数据的对象
+var data 二 { key: “value” 了；// 你的 JSON 数据
+//将对象转换为 JSON 字符串
+var json - JSON. stringify (data);
+// 创建一个 B10b对象，类型为 application/json
+var blob = new Blob ( Ijson], I type: "application/json° });
+// 创建一个 URL 对象，指向 B1o6对象
+var url - URL.createObjectURL (blob) ;
+// 创建一个sa>元素
+var 1ink = document. createElement("a');
+//设置 <a》元素的 href 属性为 B1ob 对象的 URL
+Iink.href - url，1/ 设置下载文件的戥认名称
+1ink.download - '1.json';
+//将<a>元素添加到文档中
+document.body .appendChild (1ink)；
+//模拟点击 <日》元素，触发下载
+1ink. clickO;
+//从文档中移除<a>元素
+document. body-removeChild (link);
+//释放 URL 对象
+URL. revokeObjectURL (url);
+};
+< script> </body> </html>
